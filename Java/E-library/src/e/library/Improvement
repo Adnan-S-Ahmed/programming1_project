@@ -1,0 +1,31 @@
+package e.library;
+
+import java.util.Scanner;
+
+public class ELibrary {
+
+    public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    Books books =new Books();
+    art arts = new art();
+    return_e re = new return_e();
+    
+    
+    System.out.println("Welcome to our Library! " + "\n" +"********************************");
+    System.out.println("Please select from the following: " +"\n"+"Books"+"\n"+"Scientific Articles" +"\n" +"Exit");
+    String select = input.next();
+    
+
+    if(select.equalsIgnoreCase("Books"))
+    {   books.allBooks();   }
+
+    else if(select.equalsIgnoreCase("Scientific Articles"))
+    {   arts.allart();  }
+    
+    else if (select.equalsIgnoreCase("Exit"))
+    {   System.out.println("Thank you");    }
+    
+    else
+    {  re.erorr(); }
+  }
+}
